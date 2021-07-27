@@ -14,7 +14,7 @@ then
 	printf "$ERRCODE : $ERRTEXT\n"
 	exit 0
 else
-	printf "Login OK"
+	printf " "
 fi
 
 printf "\n ### adding tenant ###\n"
