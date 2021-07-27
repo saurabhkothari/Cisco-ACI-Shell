@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+        
+        stage('Git'){
+            steps{
+            git branch: 'main', url: 'https://github.com/saurabhkothari/Cisco-ACI-Shell.git'
+            }
+        }
 
         stage('Generate Cookie'){
           
