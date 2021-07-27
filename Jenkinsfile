@@ -11,15 +11,17 @@ pipeline {
         }
 
         stage('Generate Cookie'){
-          dir("${env.WORKSPACE}"){
+          
             steps {
+               dir("${env.WORKSPACE}"){
                         sh 'bash generate_cookie.sh'
                     }
                 }
         }
         stage('show available tenants'){
-          dir("${env.WORKSPACE}"){
+
             steps {
+               dir("${env.WORKSPACE}"){
                         sh 'bash show_tenants.sh'
                     }
                 }
