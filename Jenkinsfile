@@ -51,7 +51,12 @@ pipeline {
                         sh 'bash show_tenants.sh'
                     }
                 }
-
+        stage('Remove Cookie)'){
+          
+            steps {
+                        sh 'bash remove_cookie.sh'
+                    }
+                }
           
     }
 }
