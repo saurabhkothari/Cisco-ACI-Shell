@@ -6,7 +6,7 @@ pipeline {
         stage('Generate Cookie'){
           
             steps {
-                        bash 'generate_cookie.sh'
+                        sh 'generate_cookie.sh'
                     }
                 }
         stage('show available tenants'){
