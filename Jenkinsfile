@@ -4,23 +4,26 @@ pipeline {
     stages {
         
         stage('Git'){
+         
             steps{
             git branch: 'main', url: 'https://github.com/saurabhkothari/Cisco-ACI-Shell.git'
             }
         }
 
         stage('Generate Cookie'){
-          
+          dir("${env.WORKSPACE}"){
             steps {
                         sh 'bash generate_cookie.sh'
                     }
                 }
+        }
         stage('show available tenants'){
-          
+          dir("${env.WORKSPACE}"){
             steps {
                         sh 'bash show_tenants.sh'
                     }
                 }
+        }
 
         stage('Add Tenant'){
           
