@@ -12,7 +12,7 @@ then
 	printf "$ERRCODE : $ERRTEXT\n"
 	exit 0
 else
-	printf "Login OK"
+	printf " "
 fi
 
 printf "\n\n ### Printing list of all Tenants ###\n\n"
