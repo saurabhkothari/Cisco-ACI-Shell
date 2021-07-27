@@ -2,7 +2,7 @@
 
 APIC="10.76.101.138"
 
-printf "\n### logging in ###\n"
+
 
 OUT=$(curl -s -X POST -k https://$APIC/api/aaaLogin.json -d '{ "aaaUser" : { "attributes" : { "name" : "admin" , "pwd" : "cisco'\!'1234" } } }' -c cookie.txt EOF)
 ERRCODE=$(echo $OUT | jq --raw-output '.imdata[0] .error .attributes .code')
